@@ -8,12 +8,12 @@
 
 .current-temp {
   color: rgba(30, 26, 87, 0.904);
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 48px;
   font-weight: 300px;
   margin-bottom: 0px;
   position: relative;
   left: 20px;
+  top: 10px;
 }
 .unit {
   font-size: 14px;
