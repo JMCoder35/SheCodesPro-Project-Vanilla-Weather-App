@@ -6,12 +6,30 @@
   border-radius: 10px;
 }
 
-.temp-current {
+.current-temp {
   color: rgba(30, 26, 87, 0.904);
-  font-size: 28px;
-  line-height: 31px;
+  font-size: 36px;
+  line-height: 43px;
   font-weight: 300px;
   margin-bottom: 0px;
+}
+.unit {
+  font-size: 12px;
+  font-weight: 100px;
+  line-height: 15px;
+  position: relative;
+  top: -16px;
+}
+
+.current-temp-image {
+  margin: 10px;
+  height: 64px;
+  width: 64px;
+}
+
+.forecast {
+  position: relative;
+  right: -35px;
 }
 
 body {
@@ -28,6 +46,18 @@ h1 {
 
 h2 {
   color: rgba(56, 55, 65, 0.76);
+  font-size: 22px;
+  font-weight: 200px;
+  line-height: 18px;
+  display: inline;
+  float: right;
+  position: relative;
+  top: -28px;
+  right: 20px;
+}
+
+h3 {
+  color: rgba(56, 55, 65, 0.76);
   font-size: 18px;
   font-weight: 200px;
   line-height: 21px;
@@ -43,6 +73,8 @@ li {
   font-size: 16px;
   font-weight: 100px;
   line-height: 19px;
+  position: relative;
+  right: -40px;
 }
 small {
   color: rgba(56, 55, 65, 0.76);
