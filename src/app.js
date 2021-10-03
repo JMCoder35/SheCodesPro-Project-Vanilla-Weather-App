@@ -22,7 +22,8 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data.main);
+  console.log(response.data);
+
   let temperatureElement = document.querySelector("#currentTemp");
   let cityElement = document.querySelector("#city");
   let weatherDescription = document.querySelector("#weatherDescription");
@@ -30,6 +31,7 @@ function displayTemperature(response) {
   let feelsLikeElement = document.querySelector("#feelsLike");
   let dateTimeElement = document.querySelector("#dateTime");
   let windSpeedElement = document.querySelector("#windSpeed");
+  let currentIconElement = document.querySelector("#currentIcon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   weatherDescription.innerHTML = response.data.weather[0].description;
@@ -37,10 +39,13 @@ function displayTemperature(response) {
   windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   dateTimeElement.innerHTML = formatDate(response.data.dt * 1000);
+  currentIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "29ed711e6c528e8877439d3d2d9efee4";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
 
-console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
