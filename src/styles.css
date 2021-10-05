@@ -22,6 +22,8 @@
   position: relative;
   top: -14px;
   left: 10px;
+  color: rgba(30, 26, 87, 0.904);
+  text-decoration: none;
 }
 
 .unit.feels-like {
