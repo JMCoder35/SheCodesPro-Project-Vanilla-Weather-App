@@ -22,11 +22,21 @@
   position: relative;
   top: -14px;
   left: 10px;
-  color: rgba(30, 26, 87, 0.904);
   text-decoration: none;
 }
+.unit.active {
+  font-size: 14px;
+  font-weight: 100px;
+  line-height: 15px;
+  position: relative;
+  top: -14px;
+  left: 10px;
+  color: rgba(30, 26, 87, 0.904);
+  text-decoration: none;
+  cursor: default;
+}
 
-.unit.feels-like {
+.feels-like {
   font-size: 12px;
   font-weight: 100px;
   line-height: 15px;

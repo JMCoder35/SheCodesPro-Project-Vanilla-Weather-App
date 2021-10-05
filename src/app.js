@@ -34,6 +34,7 @@ function displayTemperature(response) {
   let currentIconElement = document.querySelector("#currentIcon");
   celsiusTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusLink.classList.add("active");
   cityElement.innerHTML = response.data.name;
   weatherDescription.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -54,8 +55,11 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  //remove the .unit class css from celsius link
   let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
   let temperatureElement = document.querySelector("#currentTemp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let feelsLikeElement = document.querySelector("#feelsLike");
   temperatureElement.innerHTML = fahrenheitTemperature;
   feelsLikeElement.innerHTML = fahrenheitTemperature + "°F";
@@ -63,7 +67,10 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+  //remove the .unit class css from fahrenheit link
   let temperatureElement = document.querySelector("#currentTemp");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let feelsLikeElement = document.querySelector("#feelsLike");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   feelsLikeElement.innerHTML = Math.round(celsiusTemperature) + "°C";
