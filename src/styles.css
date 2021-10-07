@@ -13,14 +13,20 @@
   margin-bottom: 0px;
   position: relative;
   left: 10px;
-  top: 10px;
+  top: 32px;
+}
+
+.current-conditions {
+  position: relative;
+  top: 30px;
+  left: 10px;
 }
 .unit {
   font-size: 14px;
   font-weight: 100px;
   line-height: 15px;
   position: relative;
-  top: -14px;
+  top: 10px;
   left: 10px;
   text-decoration: none;
 }
@@ -29,7 +35,7 @@
   font-weight: 100px;
   line-height: 15px;
   position: relative;
-  top: -14px;
+  top: 10px;
   left: 10px;
   color: rgba(30, 26, 87, 0.904);
   text-decoration: none;
@@ -47,15 +53,16 @@
 
 .current-icon {
   margin: 10px;
-  height: 72px;
-  width: 72px;
+  height: 100px;
+  width: 100px;
   position: relative;
   left: 20px;
+  top: 22px;
 }
 
 .forecast {
   position: relative;
-  right: -35px;
+  right: -5px;
 }
 
 body {
