@@ -21,6 +21,32 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class=col-6"`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="weather-forecast">${day}</div>
+    <img
+        class="forecast-image"
+        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+              alt=""
+        width="36"
+      />
+    <div class="forecast-temperatures">
+       <span class="forecast-temperature-max">18°</span> /
+       <span class="forecast-temperature-min">12°</span>
+    </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   console.log(response.data);
 
@@ -45,6 +71,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  displayForecast();
 }
 
 function handleSubmit(event) {
