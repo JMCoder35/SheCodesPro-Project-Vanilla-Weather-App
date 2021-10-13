@@ -31,34 +31,45 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
+  let days = response.data.daily;
+  let daysElement = document.querySelector("#weather-forecast-days");
   let forecastElement = document.querySelector("#weather-forecast");
-
-  let forecastHTML = `<div class=col-6"`;
+  let daysHTML = `<div class="col-2 weather-forecast-days"`;
+  days.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      daysHTML =
+        daysHTML +
+        `<div class="weather-forecast-days">${formatDay(forecastDay.dt)}</div>
+        `;
+    }
+  });
+  let forecastHTML = `<div class="col-4 weather-forecast"`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<div class="weather-forecast">${formatDay(forecastDay.dt)}</div>
-    <img
+        `<div class="forecast-temperatures">
+       <span><img
         class="forecast-image"
         src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png"
         alt=""
         width="36"
-      />
-    <span class="forecast-temperatures">
-       <span class="forecast-temperature-max">${Math.round(
-         forecastDay.temp.max
-       )}°</span> /
+      /></span>
+      <span class="forecast-temperature-max">${Math.round(
+        forecastDay.temp.max
+      )}°</span> /
        <span class="forecast-temperature-min">${Math.round(
          forecastDay.temp.min
        )}°</span>
-    </span>
+    </div>
     `;
     }
   });
 
+  daysHTML = daysHTML + `</div>`;
+  daysElement.innerHTML = daysHTML;
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
@@ -151,3 +162,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 navigator.geolocation.getCurrentPosition(retrievePosition);
+
+fitty("#weather-forecast");
