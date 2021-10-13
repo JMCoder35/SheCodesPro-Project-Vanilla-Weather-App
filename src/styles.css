@@ -28,7 +28,7 @@
   line-height: 15px;
   position: relative;
   top: 10px;
-  left: 10px;
+  left: 20px;
   text-decoration: none;
 }
 .unit.active {
@@ -57,7 +57,7 @@
   height: 100px;
   width: 100px;
   position: relative;
-  left: 10px;
+  left: 20px;
   top: 22px;
 }
 
