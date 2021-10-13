@@ -16,6 +16,15 @@
   </head>
   <body>
     <div class="container">
+      <video
+        autoplay
+        muted
+        loop
+        src="src/sky.mp4"
+        type="video/mp4"
+        class="my-video"
+        id="myVideo"
+      ></video>
       <div class="weather-app">
         <h1 id="city"></h1>
         <h2><span id="dateTime"></span></h2>
@@ -24,8 +33,7 @@
           <div class="col-6">
             <img src="" class="current-icon" id="currentIcon" />
             <span class="current-temp" id="currentTemp"></span
-            ><span class="unit active"> °F</a></span
-            >
+            ><span class="unit active"> °F</span>
             <ul class="current-conditions" id="currentConditions">
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind Speed: <span id="windSpeed"></span> Km/H</li>
