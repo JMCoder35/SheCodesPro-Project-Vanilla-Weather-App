@@ -56,13 +56,28 @@
   height: 100px;
   width: 100px;
   position: relative;
-  left: 20px;
+  left: 10px;
   top: 22px;
 }
 
-.weather-forecast {
+.forecast-temperature-max {
+  font-weight: bolder;
+}
+
+.weather-forecast-days {
+  margin: 0px, auto;
+  padding: 0px;
   position: relative;
-  right: -5px;
+  right: -30px;
+  line-height: 36px;
+}
+
+.weather-forecast {
+  margin: 0px, auto;
+  padding: 0px;
+  width: auto;
+  line-height: 20px;
+  text-align: left;
 }
 
 body {
