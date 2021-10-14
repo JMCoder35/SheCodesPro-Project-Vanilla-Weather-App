@@ -15,6 +15,53 @@
     <title>Vanilla Weather App</title>
   </head>
   <body>
+    <div class="weather-app">
+      <h1 id="city"></h1>
+      <h2><span id="dateTime"></span></h2>
+      <h3 id="weatherDescription">Clear</h3>
+      <div class="row">
+        <div class="col-6">
+          <img src="" class="current-icon" id="currentIcon" />
+          <span class="current-temp" id="currentTemp"></span
+          ><span class="unit active"> °F</span>
+          <ul class="current-conditions" id="currentConditions">
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind Speed: <span id="windSpeed"></span> Km/H</li>
+            <li>Feels Like: <span id="feelsLike"></span></li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <div class="weather-forecast-days" id="weather-forecast-days"></div>
+        </div>
+        <div class="col-4">
+          <div class="weather-forecast" id="weather-forecast"></div>
+        </div>
+      </div>
+      <form id="search-form" class="mt-4">
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="search"
+              placeholder="Search City"
+              class="form-control"
+              id="city-input"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-3">
+            <input type="submit" value="Search" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <small>
+      <a
+        href="https://github.com/JMCoder35/SheCodesPro-Project-Vanilla-Weather-App.git"
+        target="_blank"
+        >Open-source code</a
+      >
+      by Jasmin Curtis
+    </small>
     <div class="container">
       <video
         autoplay
@@ -25,53 +72,6 @@
         class="my-video"
         id="myVideo"
       ></video>
-      <div class="weather-app">
-        <h1 id="city"></h1>
-        <h2><span id="dateTime"></span></h2>
-        <h3 id="weatherDescription">Clear</h3>
-        <div class="row">
-          <div class="col-6">
-            <img src="" class="current-icon" id="currentIcon" />
-            <span class="current-temp" id="currentTemp"></span
-            ><span class="unit active"> °F</span>
-            <ul class="current-conditions" id="currentConditions">
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind Speed: <span id="windSpeed"></span> Km/H</li>
-              <li>Feels Like: <span id="feelsLike"></span></li>
-            </ul>
-          </div>
-          <div class="col-2">
-            <div class="weather-forecast-days" id="weather-forecast-days"></div>
-          </div>
-          <div class="col-4">
-            <div class="weather-forecast" id="weather-forecast"></div>
-          </div>
-        </div>
-        <form id="search-form" class="mt-4">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Search City"
-                class="form-control"
-                id="city-input"
-                autocomplete="off"
-              />
-            </div>
-            <div class="col-3">
-              <input type="submit" value="Search" class="btn btn-primary" />
-            </div>
-          </div>
-        </form>
-      </div>
-      <small>
-        <a
-          href="https://github.com/JMCoder35/SheCodesPro-Project-Vanilla-Weather-App.git"
-          target="_blank"
-          >Open-source code</a
-        >
-        by Jasmin Curtis
-      </small>
     </div>
 
     <script src="src/app.js"></script>
